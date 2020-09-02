@@ -1,0 +1,320 @@
+body{
+  overflow-x: hidden;
+}
+
+/*--------------------------------------------POČEO NAVBAR-------------------------------------------------*/
+.hamburger-menu-container{
+  display: flex;
+}
+header.sticky {
+  
+  height: 8rem;
+
+}
+
+#check{
+  display: block;
+}
+
+.nav-btn {
+  position: fixed;
+  height: calc(100vh - 8rem);
+  top: 8rem;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.6);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: .65s;
+}
+.nav-link{
+  padding: 0.1rem;
+}
+.nav-link a{
+  padding: 3rem;  
+}
+
+#check:checked ~ .nav-btn{
+  transform: translateX(0);
+
+}
+
+#check:checked ~ .nav-btn .nav-link,
+#check:checked ~ .nav-btn .log-sign{
+  animation: animation .5s ease forwards var(--i);
+}
+
+.nav-links{
+  flex: initial;
+  width: 100%;
+  
+}
+.nav-links > ul {
+  flex-direction: column;
+}
+
+.nav-link {
+  margin-top: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+
+.nav-link:hover > a{
+  transform: scale(1);
+  background-color: rgb(0, 0, 0, 0.8);
+  border-left: 5px solid #0c7a43;
+}
+
+.dropdown, .dropdown.second{
+  position: initial;
+  top: initial;
+  left: initial;
+  transform: initial;
+  opacity: 1;
+  pointer-events: auto;
+  width: 100%;
+  padding: 0;
+  background-color: rgb(0, 0, 0, 0.68);
+  display: none;
+}
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+  display: block;
+}
+.nav-link:hover > a >i,
+.dropdown-link:hover > a >i{
+  transform: rotate(360deg);
+}
+
+.dropdown-link > a {
+  background-color: transparent;
+  color: #fff;
+  padding: 2.6rem 1.3rem;
+  line-height: 1;
+}
+
+.dropdown.second .dropdown-link > a{
+   padding: 1.8rem 2rem 1.2rem 3rem;
+}
+.dropdown.second .dropdown.second .dropdown-link > a{
+  padding: 1.8rem 2.2rem 1.5rem 3.5rem;
+}
+
+.dropdown-link:not(:nth-last-child(2)){
+  border-bottom: none;
+}
+.arrow{
+z-index: 1;
+left: 10%;
+
+}
+
+
+.dropdown .dropdown .arrow{
+display: none;
+}
+.dropdown-link:hover > a{
+background-color: rgb(0, 0, 0, 0.83);
+}
+
+
+
+.nav-link > a > i {
+font-size: 1.1rem;
+transform: rotate(-90deg);
+transition: .7s;
+
+}
+.dropdown i{
+font-size: 1rem;
+transition: .7s;
+}
+
+.log-sign{
+  flex: initial;
+  width: 100%;
+  padding: 1.5rem 1.9rem;
+  justify-content: flex-start;
+  opacity: 0;
+  transform: translateY(15px);
+
+  
+}
+@keyframes animation{
+  from{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*--------------------------------------------Završio se NAVBAR-------------------------------------------------*/
+
+.heading-primary-main  {
+  font-size: 3.6rem;
+  letter-spacing: 1.5px;
+  margin-left: 0;
+}
+.heading-primary-sub {
+  font-size: 3.6rem;
+  letter-spacing: 2px;
+  margin-left: 0;
+}
+
+.heading-primary-text {
+  font-size: 1.9rem;
+  letter-spacing: 3.8px;
+  margin-left: 0;
+}
+
+
+.btnn:link,
+.btnn:visited {
+  
+    padding: 14px 38px;
+   
+}
+.btnn-white {
+ 
+  font-size: 15px;
+}
+.hero{
+  
+  height: 65vh;
+ 
+}
+.logo img {
+  width: 6.15rem;
+  
+}
+
+/*--------------------------------------------zelena kutija-------------------------------------------------*/
+
+.section-green-box{
+ 
+  padding-top: 2rem;
+  padding-bottom: 2.3rem;
+}
+.heading-box{
+  color: #fff;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.green-box-text{
+  margin-top: 1rem;
+color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.btnk-white {
+  background-color: var(--primray-color);
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 2rem;
+  border: 3px solid #fff;
+}
+
+/*--------------------------------------------zasto mi sekcija-------------------------------------------------*/
+.section-about {
+  
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.23)),
+  url(../img/img10.jpg)top center no-repeat;
+  background-size: cover;
+ 
+  }
+
+.section-about .row{
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.15fr;
+}
+.cicak{
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: -25.5px;
+  left: 46%;
+  background-image:linear-gradient(to right, #0c7a43, #0a7a42);
+  transform: rotate(45deg);
+}
+
+.heading-tertiary {
+  font-size: 2.6rem;
+  padding: 0 2rem;
+  
+}
+.paragraph {
+  
+  padding: 0 2rem;
+  font-size: 2.1rem;
+
+}
+.btnn-text{
+ margin-left: 2rem;
+ margin-right: 2rem;
+
+}
+/*--------------------------------------------brojac-------------------------------------------------*/
+.counters{
+  
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  
+}
+
+.counters .container-count{
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  }
+/*--------------------------------------------gde treniramo-------------------------------------------------*/
+
+.section-about-gde .row{
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.15fr;
+}
+.section-about-gde {
+  height: 123vh;
+}
+
+.composition__photo--p1 {
+  left: 0;
+  top: 0.3rem;
+}
+.composition__photo--p2 {
+  right: 0;
+  top: 1rem;
+}
+
+.composition__photo--p3 {
+  left: 2;
+  top: 8rem;
+}
+.heading-tertiary-gde {
+  padding: 0 1.5rem;
+}
+.paragraph-gde{
+  padding: 0 1.5rem;
+}
+.btng-text{
+  margin-left: 2rem;
+
+
+}
+/*--------------------------------------------footer-------------------------------------------------*/
+
+.footer .links {
+  display: none;
+}
+.footer .contact-form{
+  display: none;
+}
